@@ -5,6 +5,7 @@ import json
 import portforwardlib
 
 configurationUrl = os.environ['CONFIG_URL']
+port = os.environ['WEBSERVER_PORT']
 
 app = Flask(__name__)
 
@@ -30,4 +31,4 @@ def update_port_forwardings():
     return response
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port = port)
